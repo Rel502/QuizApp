@@ -1,8 +1,5 @@
 * {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    text-decoration: none;
-    list-style-type: none;
+    box-sizing: border-box;
 }
 
 html {
