@@ -1,0 +1,14 @@
+* {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
