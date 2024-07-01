@@ -9,3 +9,8 @@ html {
 body {
     margin: 0;
 }
+
+main {
+    min-height: calc(100vh - 49.99px);
+    background-color: rgb(39,39,39);
+}
