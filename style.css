@@ -10,7 +10,28 @@ body {
     margin: 0;
 }
 
+.icons {
+    height: 32px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
 main {
     min-height: calc(100vh - 49.99px);
     background-color: rgb(39,39,39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    width: 25rem;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
