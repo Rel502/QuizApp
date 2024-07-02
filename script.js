@@ -1,18 +1,21 @@
 function init() {
-    render();
+    renderCurrentQuestion();
 }
 
-function render() {
+let totalQuestionsNumber = questions.length;    /*---> 1 von X Fragen */
+let currentQuestionNumber = 1;                  /*---> X von 10 Fragen */
+
+let currentQuestionIndex = 0;
+
+function renderCurrentQuestion() {
     let content = document.getElementById('cardContent');
     content.innerHTML = '';
 
-    let currentQuestion = questions[0];
-    let currentQuestionNumber = 1;
-
-    content.innerHTML = renderCurrentQuestion(currentQuestion, currentQuestionNumber);
+    let currentQuestion = questions[currentQuestionIndex]
+    content.innerHTML = returnCurrentQuestionHTML(currentQuestion);
 }
 
-function renderCurrentQuestion(currentQuestion, currentQuestionNumber) {
+function returnCurrentQuestionHTML(currentQuestion) {
     return /*html*/`
         <h5 class="card-title">${currentQuestion['question']}</h5>
 
@@ -38,7 +41,7 @@ function renderCurrentQuestion(currentQuestion, currentQuestionNumber) {
         </div>
 
         <div class="question-footer mt-3">
-            <p class="mb-0"><b>${currentQuestionNumber} </b>von <b>5</b> Fragen</p>
+            <p class="mb-0"><b>${currentQuestionNumber} </b>von <b>${totalQuestionsNumber}</b> Fragen</p>
             <a href="#" class="btn btn-primary">Nächste Frage</a>
         </div>
     `;
