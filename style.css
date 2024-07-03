@@ -39,3 +39,8 @@ main {
 .card-answer:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
+
+.quiz-bg-image {
+    height: 224px;
+    object-fit: contain;
+}
