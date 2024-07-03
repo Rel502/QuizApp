@@ -42,5 +42,9 @@ main {
 
 .quiz-bg-image {
     height: 224px;
+    object-fit: cover;
+}
+
+.img-obj-fit-contain {
     object-fit: contain;
 }
