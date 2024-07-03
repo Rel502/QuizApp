@@ -15,17 +15,15 @@ function renderCurrentQuestion() {
     content.innerHTML = returnCurrentQuestionHTML(currentQuestion);
 }
 
-function answer(answerIndex) {
+function validateAnswer(selection) {
     let currentQuestion = questions[currentQuestionIndex];
-    let givenAnswer = answerIndex;
     let correct_answer = currentQuestion['correct_answer'];
+    let selectedQuestionNumber = selection.slice(-1);
 
-    if (givenAnswer == correct_answer) {
-        // -> card soll sich grün färben
-        // -> button wird aktiv (blau)
+    if (selectedQuestionNumber == correct_answer) {
+        document.getElementById(selection).parentNode.classList.add('bg-success-subtle');
     } else {
-        // -> card soll sich rot färben
-        // -> button bleibt inaktiv (grau)
+        document.getElementById(selection).parentNode.classList.add('bg-danger-subtle');
     }
 }
 
