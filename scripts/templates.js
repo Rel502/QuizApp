@@ -25,7 +25,7 @@ function returnCurrentQuestionHTML(currentQuestion) {
 
         <div class="question-footer mt-3">
             <p class="mb-0"><b>${currentQuestionNumber} </b>von <b>${totalQuestionsNumber}</b> Fragen</p>
-            <a href="#" class="btn btn-primary">Nächste Frage</a>
+            <button onclick="nextQuestion()" id="nextQuestionBtn" href="#" class="btn btn-primary" disabled>Nächste Frage</button>
         </div>
     `;
 }

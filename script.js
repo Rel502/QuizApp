@@ -24,6 +24,14 @@ function validateAnswer(selection) {
         document.getElementById(selection).parentNode.classList.add('bg-success-subtle');
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger-subtle');
+        document.getElementById(`answer_${correct_answer}`).parentNode.classList.add('bg-success-subtle');
     }
+
+    document.getElementById('nextQuestionBtn').disabled = false;
 }
 
+function nextQuestion() {
+    currentQuestionIndex++;
+    currentQuestionNumber++;
+    renderCurrentQuestion();
+}
